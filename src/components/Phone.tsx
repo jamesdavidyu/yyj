@@ -1,10 +1,6 @@
-"use client";
-
 import { Box, Center, Text } from "@mantine/core";
-import { Login } from "./Login";
-import { screenHeight } from "@/utils/utils";
 
-export const Monitor = () => {
+export const Phone = () => {
   return (
     <Box
       style={{
@@ -14,8 +10,8 @@ export const Monitor = () => {
       <Center style={{ height: "100%" }}>
         <Box
           style={{
-            width: "50vw",
-            height: "66vh",
+            width: "20vw",
+            height: "50vh",
             borderRadius: "15px",
             border: "10px solid #333",
             boxShadow: "0 8px 16px rgba(0, 0, 0, 0.3)",
@@ -25,11 +21,11 @@ export const Monitor = () => {
         >
           <Box
             style={{
-              height: "66vh",
+              height: "50vh",
             }}
           >
             <Center style={{ height: "100%" }}>
-              <Login />
+              <Text>Test</Text>
             </Center>
           </Box>
         </Box>

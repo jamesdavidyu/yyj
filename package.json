@@ -13,8 +13,10 @@
     "@mantine/dates": "^7.12.1",
     "@mantine/form": "^7.12.1",
     "@mantine/hooks": "^7.12.1",
+    "@tabler/icons-react": "^3.12.0",
     "dayjs": "^1.11.13",
     "next": "14.2.6",
+    "next-auth": "^4.24.7",
     "react": "^18",
     "react-dom": "^18"
   },

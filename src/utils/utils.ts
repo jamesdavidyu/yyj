@@ -1,0 +1,1 @@
+export const screenHeight: string = "66vh"
