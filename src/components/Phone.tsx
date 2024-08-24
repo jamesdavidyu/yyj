@@ -62,7 +62,9 @@ export const Phone = () => {
                   <br />
                   <PasswordInput placeholder="Confirm password" />
                   <br />
-                  <Button bg="red">Sign Up</Button>
+                  <Center>
+                    <Button bg="red">Sign Up</Button>
+                  </Center>
                 </form>
               )}
             </Center>
