@@ -36,7 +36,7 @@ export const Lamp = () => {
               style={{
                 width: "100%",
                 height: "100%",
-                background: "linear-gradient(to bottom, #f0c27b, #000)",
+                background: "linear-gradient(to bottom, gold, #000)",
                 clipPath: "polygon(13% 0, 87% 0%, 100% 100%, 0 100%)",
               }}
             />

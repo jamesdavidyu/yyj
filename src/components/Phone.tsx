@@ -1,6 +1,22 @@
-import { Box, Center, Text } from "@mantine/core";
+"use client";
+
+import {
+  Box,
+  Button,
+  Center,
+  PasswordInput,
+  Text,
+  TextInput,
+} from "@mantine/core";
+import { useState } from "react";
 
 export const Phone = () => {
+  const [signUp, setSignUp] = useState(true);
+
+  const openSignUp = () => {
+    setSignUp((prev) => !prev);
+  };
+
   return (
     <Box
       style={{
@@ -24,8 +40,31 @@ export const Phone = () => {
               height: "50vh",
             }}
           >
-            <Center style={{ height: "100%" }}>
-              <Text>Test</Text>
+            <Center style={{ height: "100%", flexDirection: "column" }}>
+              {signUp ? (
+                <Box>
+                  <Text c="white" fw="bold" fz="xl">
+                    Don't have an account?
+                  </Text>
+                  <Center>
+                    <Button bg="red" onClick={openSignUp}>
+                      Sign Up
+                    </Button>
+                  </Center>
+                </Box>
+              ) : (
+                <form>
+                  <TextInput placeholder="Email" />
+                  <br />
+                  <TextInput placeholder="Username" />
+                  <br />
+                  <PasswordInput placeholder="Password" />
+                  <br />
+                  <PasswordInput placeholder="Confirm password" />
+                  <br />
+                  <Button bg="red">Sign Up</Button>
+                </form>
+              )}
             </Center>
           </Box>
         </Box>
