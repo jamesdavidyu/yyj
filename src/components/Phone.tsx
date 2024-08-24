@@ -1,22 +1,9 @@
 "use client";
 
-import {
-  Box,
-  Button,
-  Center,
-  PasswordInput,
-  Text,
-  TextInput,
-} from "@mantine/core";
-import { useState } from "react";
+import { Box, Center } from "@mantine/core";
+import { SignUpForm } from "./SignUpForm";
 
 export const Phone = () => {
-  const [signUp, setSignUp] = useState(true);
-
-  const openSignUp = () => {
-    setSignUp((prev) => !prev);
-  };
-
   return (
     <Box
       style={{
@@ -31,7 +18,7 @@ export const Phone = () => {
             borderRadius: "15px",
             border: "10px solid #333",
             boxShadow: "0 8px 16px rgba(0, 0, 0, 0.3)",
-            backgroundColor: "#000",
+            backgroundColor: "darkblue",
             position: "relative",
           }}
         >
@@ -41,32 +28,7 @@ export const Phone = () => {
             }}
           >
             <Center style={{ height: "100%", flexDirection: "column" }}>
-              {signUp ? (
-                <Box>
-                  <Text c="white" fw="bold" fz="xl">
-                    Don&#39;t have an account?
-                  </Text>
-                  <Center>
-                    <Button bg="red" onClick={openSignUp}>
-                      Sign Up
-                    </Button>
-                  </Center>
-                </Box>
-              ) : (
-                <form>
-                  <TextInput placeholder="Email" />
-                  <br />
-                  <TextInput placeholder="Username" />
-                  <br />
-                  <PasswordInput placeholder="Password" />
-                  <br />
-                  <PasswordInput placeholder="Confirm password" />
-                  <br />
-                  <Center>
-                    <Button bg="red">Sign Up</Button>
-                  </Center>
-                </form>
-              )}
+              <SignUpForm />
             </Center>
           </Box>
         </Box>

@@ -1,5 +1,4 @@
 import { Lamp } from "@/components/Lamp";
-import { Login } from "@/components/Login";
 import { Monitor } from "@/components/Monitor";
 import { Phone } from "@/components/Phone";
 import { Box, Center, Grid, GridCol, Text } from "@mantine/core";

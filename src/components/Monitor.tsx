@@ -1,14 +1,13 @@
 "use client";
 
 import { Box, Center, Text } from "@mantine/core";
-import { Login } from "./Login";
-import { screenHeight } from "@/utils/utils";
+import { LoginForm } from "./LoginForm";
 
 export const Monitor = () => {
   return (
     <Box
       style={{
-        height: "100vh",
+        height: "95vh",
       }}
     >
       <Center style={{ height: "100%" }}>
@@ -19,7 +18,7 @@ export const Monitor = () => {
             borderRadius: "15px",
             border: "10px solid #333",
             boxShadow: "0 8px 16px rgba(0, 0, 0, 0.3)",
-            backgroundColor: "#000",
+            backgroundColor: "darkblue",
             position: "relative",
           }}
         >
@@ -29,7 +28,7 @@ export const Monitor = () => {
             }}
           >
             <Center style={{ height: "100%" }}>
-              <Login />
+              <LoginForm />
             </Center>
           </Box>
         </Box>

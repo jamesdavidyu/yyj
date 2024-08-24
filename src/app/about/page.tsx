@@ -1,10 +1,20 @@
-import { Box, Button, Center, Grid, Image, Space, Text } from "@mantine/core";
+import {
+  Box,
+  Button,
+  Card,
+  Center,
+  Grid,
+  GridCol,
+  Image,
+  Space,
+  Text,
+} from "@mantine/core";
 
 const Recruiters = () => {
   return (
     <Box>
       <Box style={{ height: "25vh" }}>
-        <Center style={{ height: "150%" }}>
+        <Center style={{ height: "100%" }}>
           <Box>
             <Image
               src="https://utfs.io/f/989d0be6-0ea2-4a57-b434-75774fff8c8b-ifr4me.jpeg"
@@ -37,6 +47,19 @@ const Recruiters = () => {
           <Button fw="normal" bg="black" td="underline">
             Frameworks
           </Button>
+          <Button fw="normal" bg="black" td="underline">
+            Cloud
+          </Button>
+        </Center>
+      </Box>
+      <Box style={{ height: "75vh" }}>
+        <Center style={{ flexDirection: "column" }}>
+          <Text c="white">Projects</Text>
+          <Grid>
+            <GridCol span={6}>
+              <Card></Card>
+            </GridCol>
+          </Grid>
         </Center>
       </Box>
     </Box>
