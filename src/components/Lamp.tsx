@@ -4,7 +4,7 @@ import { Box, Button, Center, Space } from "@mantine/core";
 import { useState } from "react";
 
 export const Lamp = () => {
-  const [light, setLight] = useState(true);
+  const [light, setLight] = useState(false);
 
   const lightSwitch = () => {
     setLight((prev) => !prev);

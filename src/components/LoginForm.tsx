@@ -26,8 +26,8 @@ export const LoginForm = () => {
             <Image
               src="https://utfs.io/f/83acf69d-8644-4b12-a4ee-eb3508732d7b-xbioow.png"
               onClick={openLogin}
-              h="310.875px"
-              w="247.25px"
+              h="155.4375px"
+              w="123.625px"
               style={{ cursor: "pointer" }}
             />
           </Center>

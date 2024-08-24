@@ -18,7 +18,7 @@ export const Monitor = () => {
             borderRadius: "15px",
             border: "10px solid #333",
             boxShadow: "0 8px 16px rgba(0, 0, 0, 0.3)",
-            backgroundColor: "darkblue",
+            backgroundColor: "navy",
             position: "relative",
           }}
         >
