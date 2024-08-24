@@ -10,6 +10,7 @@ const Recruiters = () => {
             h="139.875px"
             w="111.375px"
             radius="md"
+            alt="James Yu Headshot"
           />
           <Box>
             <h1
