@@ -44,7 +44,7 @@ export const Phone = () => {
               {signUp ? (
                 <Box>
                   <Text c="white" fw="bold" fz="xl">
-                    Don't have an account?
+                    Don&#39;t have an account?
                   </Text>
                   <Center>
                     <Button bg="red" onClick={openSignUp}>
