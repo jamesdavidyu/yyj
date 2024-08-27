@@ -1,3 +1,8 @@
+"use client";
+
+import { Cloud } from "@/components/Cloud";
+import { Databases } from "@/components/Databases";
+import { Frameworks } from "@/components/Frameworks";
 import { Languages } from "@/components/Languages";
 import {
   Badge,
@@ -20,6 +25,7 @@ import {
   TabsTab,
   Text,
 } from "@mantine/core";
+import "./about.css";
 
 const Recruiters = () => {
   return (
@@ -35,15 +41,24 @@ const Recruiters = () => {
               paddingRight: "20px",
             }}
           >
-            <a href="https://www.linkedin.com/in/jamesdavidyu">
-              <Image
-                src="https://utfs.io/f/989d0be6-0ea2-4a57-b434-75774fff8c8b-ifr4me.jpeg"
-                h="139.875px"
-                w="111.375px"
-                radius="md"
-                alt="James Yu Headshot"
-              />
-            </a>
+            <HoverCard>
+              <HoverCardTarget>
+                <a href="https://www.linkedin.com/in/jamesdavidyu">
+                  <Image
+                    src="https://utfs.io/f/989d0be6-0ea2-4a57-b434-75774fff8c8b-ifr4me.jpeg"
+                    h="186.5px"
+                    w="148.5px"
+                    radius="md"
+                    alt="James Yu Headshot"
+                  />
+                </a>
+              </HoverCardTarget>
+              <HoverCardDropdown bg="#333" style={{ borderColor: "black" }}>
+                <a href="mailto:jamesdavidyu@gmail.com">
+                  <Text c="white">jamesdavidyu@gmail.com</Text>
+                </a>
+              </HoverCardDropdown>
+            </HoverCard>
           </GridCol>
           <GridCol span={7.5}>
             <Group>
@@ -73,20 +88,46 @@ const Recruiters = () => {
             <Group>
               <Tabs defaultValue="languages" color="white" c="white">
                 <TabsList>
-                  <TabsTab value="languages">Languages</TabsTab>
-                  <TabsTab value="databases">Databases</TabsTab>
-                  <TabsTab value="frameworks">Frameworks</TabsTab>
-                  <TabsTab value="cloud">Cloud</TabsTab>
+                  <TabsTab classNames={{ tab: "custom-tab" }} value="languages">
+                    Languages
+                  </TabsTab>
+                  <TabsTab classNames={{ tab: "custom-tab" }} value="databases">
+                    Databases
+                  </TabsTab>
+                  <TabsTab
+                    classNames={{ tab: "custom-tab" }}
+                    value="frameworks"
+                  >
+                    Frameworks
+                  </TabsTab>
+                  <TabsTab classNames={{ tab: "custom-tab" }} value="cloud">
+                    Cloud
+                  </TabsTab>
                 </TabsList>
                 <TabsPanel value="languages">
                   <br />
                   <Languages />
+                </TabsPanel>
+                <TabsPanel value="databases">
+                  <br />
+                  <Databases />
+                </TabsPanel>
+                <TabsPanel value="frameworks">
+                  <br />
+                  <Frameworks />
+                </TabsPanel>
+                <TabsPanel value="cloud">
+                  <br />
+                  <Cloud />
                 </TabsPanel>
               </Tabs>
             </Group>
           </GridCol>
         </Grid>
       </Box>
+      <br />
+      <br />
+      <br />
       <br />
       <Box style={{ height: "75vh" }}>
         <Center style={{ flexDirection: "column" }}>
@@ -116,18 +157,56 @@ const Recruiters = () => {
               &#40;Next.js&#41; and Java &#40;Spring Boot&#41; with MongoDB
               &#40;Atlas&#41;.
             </Text>
-            <br />
-            <Group justify="space-between">
-              <a href="https://github.com/jamesdavidyu/yyj">
-                <Button bg="red">Frontend Repo</Button>
-              </a>
-              <a href="https://github.com/jamesdavidyu/yyjApi">
-                <Button bg="yellow" c="black">
-                  Backend Repo
-                </Button>
-              </a>
+            <Group justify="right">
+              <HoverCard>
+                <HoverCardTarget>
+                  <a href="https://github.com/jamesdavidyu/yyj">
+                    <Image
+                      src="https://utfs.io/f/f9154ab4-83d6-4f30-8828-36ef21c11531-klmal9.png"
+                      h={36}
+                      w={36}
+                    />
+                  </a>
+                </HoverCardTarget>
+                <HoverCardDropdown
+                  bg="red"
+                  fw="bold"
+                  style={{ borderColor: "red" }}
+                >
+                  <a
+                    href="https://github.com/jamesdavidyu/yyj"
+                    style={{ color: "white" }}
+                  >
+                    Frontend Repo
+                  </a>
+                </HoverCardDropdown>
+              </HoverCard>
+              <HoverCard>
+                <HoverCardTarget>
+                  <a href="https://github.com/jamesdavidyu/yyjApi">
+                    <Image
+                      src="https://utfs.io/f/f9154ab4-83d6-4f30-8828-36ef21c11531-klmal9.png"
+                      h={36}
+                      w={36}
+                    />
+                  </a>
+                </HoverCardTarget>
+                <HoverCardDropdown
+                  bg="yellow"
+                  fw="bold"
+                  style={{ borderColor: "yellow" }}
+                >
+                  <a
+                    href="https://github.com/jamesdavidyu/yyjApi"
+                    style={{ color: "black" }}
+                  >
+                    Backend Repo
+                  </a>
+                </HoverCardDropdown>
+              </HoverCard>
             </Group>
           </Card>
+          <br />
         </Center>
       </Box>
     </Box>
